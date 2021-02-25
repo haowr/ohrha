@@ -573,13 +573,14 @@
                   <img src="./images/ohrhawhitereal.svg" style=' position:absolute; z-index:9; height:200px; width:100px;  opacity:.5;left:30vw;;top:50'>
 
                 </h1>
+                <div class = "col s12 right-align">
+                  <br>
+                  <i ng-if="volumeOn" ng-click="toggleMusic()" class = 'material-icons ' style="font-size:30px; color:rgb(214, 212, 212)">volume_up</i>
+                  <i ng-if="!volumeOn" ng-click="toggleMusic()" class = 'material-icons ' style="font-size:30px;  color:rgb(214, 212, 212)" >volume_off</i>
+    
+                </div>
               </div>
-              <div class = "col s12 right-align">
-                <br>
-                <i ng-if="volumeOn" ng-click="toggleMusic()" class = 'material-icons ' style="font-size:30px; color:rgb(214, 212, 212)">volume_up</i>
-                <i ng-if="!volumeOn" ng-click="toggleMusic()" class = 'material-icons ' style="font-size:30px;  color:rgb(214, 212, 212)" >volume_off</i>
-  
-              </div>
+           
               <div class = "col s4">
 
         
