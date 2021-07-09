@@ -3,7 +3,7 @@
 (function () {
 
 
-    var app = angular.module('store', [ 'chart.js','appRoutes']);
+    var app = angular.module('store', ['appRoutes']);
 
 
 

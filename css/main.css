@@ -282,7 +282,7 @@ perspective: 1000;overflow:hidden;
 }
 @font-face {
   font-family: "shem";
-  src: url(../fonts/ppp.ttf) format("truetype");
+  src: url(../assets/pp.ttf) format("truetype");
 }
 
 .opensans{
