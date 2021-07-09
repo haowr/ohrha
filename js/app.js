@@ -8,37 +8,36 @@
 
 
     app.config(function ($httpProvider) {
-console.log("OY")
 
     });
 
     app.controller('mainCtrl', ['$http', '$scope', '$timeout',  '$interval', '$window', function ($http, $scope, $timeout, $interval, $window) {
 
-        $scope.chapelOpen = true;
-        $scope.soundOpen = false;
-        $scope.shopOpen = false;
-        $scope.lightsPageOpen = false;
-        $scope.contactPageOpen = false;
-        $scope.zoomPageOpen = false;
-        $scope.volumeOn = false;
-        $scope.zoomPageOpen = false;
+        $scope.chapelOpen           = true;
+        $scope.soundOpen            = false;
+        $scope.shopOpen             = false;
+        $scope.lightsPageOpen       = false;
+        $scope.contactPageOpen      = false;
+        $scope.zoomPageOpen         = false;
+        $scope.volumeOn             = false;
+        $scope.zoomPageOpen         = false;
+        $scope.contactPageOpen      = false;
+        $scope.soundPageOpen        = false;
+        $scope.lightPageOpen        = false;
+        $scope.homePageOpen         = true;
 
-        $scope.audio = new Audio('../audio/ui_tap-variant-01.wav')
-        $scope.bgaudio = new Audio('../images/web.wav')
-        $timeout(function(){
-
-            //$scope.bgaudio.play()
-
-
-        },200)
+        $scope.audio                = new Audio('../audio/ui_tap-variant-01.wav')
+        $scope.bgaudio              = new Audio('../images/web.wav')
+  
         $scope.openShopPage = function(){
 
             $scope.bgaudio.play()
 
         }
+
         $scope.openShopPage()
+
         $scope.toggleMusic = function(){
-            console.log('clicked')
 
             if(!$scope.volumeOn){
 
@@ -49,14 +48,15 @@ console.log("OY")
 
                 $scope.volumeOn = false;
             }
+
         }
 
         $scope.closeZoomPage = function(){
-            //$scope.audio.play()
 
             if(!$scope.zoomPageOpen){
 
                 $scope.zoomPageOpen = true;
+
             }else{
 
                 $scope.zoomPageOpen = false;
@@ -64,20 +64,17 @@ console.log("OY")
             }
         }
 
-        $scope.contactPageOpen  = false;
-        $scope.soundPageOpen    =   false;
-        $scope.lightPageOpen    = false;
-        $scope.homePageOpen     = true;
+
 
         $scope.openContactPage     = function(){
 
                 if(!$scope.contactPageOpen){
 
-                    $scope.contactPageOpen  = true;
-                    $scope.homePageOpen = false;
-                    $scope.soundOpen        = false;
-                    $scope.soundPageOpen = false;
-                    $scope.lightsPageOpen    = false;
+                    $scope.contactPageOpen      = true;
+                    $scope.homePageOpen         = false;
+                    $scope.soundOpen            = false;
+                    $scope.soundPageOpen        = false;
+                    $scope.lightsPageOpen       = false;
 
                 }
 
@@ -88,14 +85,11 @@ console.log("OY")
 
             $scope.audio.play()
 
-
                 if( !$scope.shopOpen){
 
                     $scope.homePageOpen = false;
-                    $scope.soundOpen = false;
-                    $scope.shopOpen = true;
-
-                    console.log("should run")
+                    $scope.soundOpen    = false;
+                    $scope.shopOpen     = true;
 
                 }
 
@@ -103,16 +97,12 @@ console.log("OY")
 
         $scope.openSoundPage = function(){
 
-
-            //$scope.audio.play()
-            console.log('clicked')
             if(!$scope.soundOpen){
 
-                    $scope.soundOpen = true;
-                    $scope.homePageOpen = false;
-                    $scope.contactPageOpen = false;
-                    $scope.lightsPageOpen = false;
-
+                    $scope.soundOpen        = true;
+                    $scope.homePageOpen     = false;
+                    $scope.contactPageOpen  = false;
+                    $scope.lightsPageOpen   = false;
 
             }
 
@@ -120,13 +110,12 @@ console.log("OY")
 
         $scope.openLightsPage = function(){
 
-          //  $scope.audio.play()
             if(!$scope.lightsPageOpen){
 
-               $scope.lightsPageOpen = true;
-                $scope.soundOpen = false;
-                $scope.contactPageOpen = false;
-                $scope.homePageOpen = false;
+                $scope.lightsPageOpen   = true;
+                $scope.soundOpen        = false;
+                $scope.contactPageOpen  = false;
+                $scope.homePageOpen     = false;
 
             }
 
@@ -134,13 +123,12 @@ console.log("OY")
 
         $scope.openHomePage = function(){
 
-
             if(!$scope.homePageOpen){
 
-                $scope.homePageOpen = true;
-                $scope.contactPageOpen = false;
-                $scope.soundOpen = false;
-                $scope.lightsPageOpen = false;
+                $scope.homePageOpen         = true;
+                $scope.contactPageOpen      = false;
+                $scope.soundOpen            = false;
+                $scope.lightsPageOpen       = false;
 
             }
 
